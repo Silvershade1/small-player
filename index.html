@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>small player</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <script
+      src="https://kit.fontawesome.com/f753f832cb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="popup-container" id="fileImportPopup">
+        <div class="popup">
+          <h2>Import File</h2>
+          <input type="file" id="fileInput" accept="mkv mp4" />
+          <button id="import">Import</button>
+        </div>
+      </div>
+      <div class="wraper">
+        <div class="timeline">
+          <div class="progress-area">
+            <div class="progress"></div>
+          </div>
+        </div>
+        <ul class="contorls">
+          <li class="contorl left">
+            <i id="iconVolume" class="fa-regular fas fa-volume-high"></i>
+            <input type="range" id="volume" min="0" max="10" value="10" />
+            <div class="timer">
+              <p id="time-left">00:00</p>
+              <span>/</span>
+              <p id="time-all">00:00</p>
+            </div>
+          </li>
+          <li class="contorl center">
+            <button id="backward"><i class="fa-solid fa-backward"></i></button>
+            <button><i id="play" class="fa-solid fa-play"></i></button>
+            <button id="foreward">
+              <i class="fa-solid fas fa-forward"></i>
+            </button>
+          </li>
+          <li class="contorl right">
+            <button><i id="full-sceren" class="fa-solid fa-expand"></i></button>
+          </li>
+        </ul>
+      </div>
+      <video class="video"></video>
+    </div>
+
+    <script src="./script/script.js"></script>
+  </body>
+</html>
